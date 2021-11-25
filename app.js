@@ -10,8 +10,9 @@ app.get("/", (req, res) => {
 app.get("/contacts", (req, res) => {
   res.render("contacts");
 });
+
 //pass requests to the router middleware
-const router = require("./routes/post");
+const router = require("./routes/apis");
 app.use(router);
 //make the app listen on port
 const port = process.argv[2] || process.env.PORT || 3000;
